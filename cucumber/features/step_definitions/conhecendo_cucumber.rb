@@ -1,6 +1,10 @@
 # First Cenario
 Dado(/^que estou aprendendo comandos$/) do
-  puts 'Deu certo'
+  @nome_cliente = Faker::Name.name
+  @cpf = Faker::CPF.numeric
+  @agencia = Faker::Base.numerify('####-#')
+  @conta = Faker::Base.numerify('#####-#')
+  puts 'O Cliente ' + @nome_cliente + ' portador do CPF ' + @cpf + ' com conta na agência ' + @agencia + ' e conta de numero ' + @conta
 end
 
 Quando(/^escrever os comandos$/) do
